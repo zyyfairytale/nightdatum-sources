@@ -1,0 +1,367 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sources · Where does the water of AI data centres go? · Setpoint</title><meta name="description" content="Every number in the Setpoint episode &#x27;Where does the water of AI data centres go?&#x27;, with its source, the exact quote and the arithmetic.">
+<link rel="icon" href="../mark.svg"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b1a1c;--panel:#10252a;--ice:#9fe8ff;--copper:#e08a4f;--champ:#d9c49a;--text:#e9f6f8;--dim:#9fb4b6}
+*{box-sizing:border-box}html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:radial-gradient(ellipse 80% 50% at 50% 0,#1d3a3a 0,var(--bg) 70%) fixed;color:var(--text);
+font:17px/1.6 'Space Grotesk',system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:48px 20px 80px}
+header{display:flex;align-items:center;gap:16px;margin-bottom:36px}header img{width:56px;height:56px}
+header .w{font-weight:500;letter-spacing:.2em;font-size:22px}header .t{color:var(--champ);font-size:15px}
+h1{font-size:30px;line-height:1.25;margin:0 0 8px}h2{font-size:14px;letter-spacing:.14em;color:var(--champ);margin:40px 0 12px;text-transform:uppercase}
+.lead{color:var(--dim);margin:0 0 28px}a{color:var(--ice)}
+.fact{background:var(--panel);border:1px solid #d9c49a33;border-radius:12px;padding:18px 20px;margin:14px 0}
+.said{font-size:18px;margin:0 0 10px}.said b{color:var(--ice);font-weight:600}
+.val{font-size:15px;color:var(--copper);font-weight:600;margin-bottom:6px}
+.src{font-size:15px;margin:6px 0}blockquote{margin:10px 0;padding:8px 14px;border-left:3px solid var(--champ);color:#cfdfe1;font-size:15px}
+.meta{font-size:13px;color:var(--dim)}.calc{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ice)}
+footer{margin-top:48px;color:var(--dim);font-size:14px;border-top:1px solid #d9c49a33;padding-top:18px}
+</style></head><body><main>
+<header><img src="../mark.svg" alt="Setpoint logo"><div><div class="w">SETPOINT</div><div class="t">How the machines of modern life actually work</div></div></header>
+
+<h1>Where does the water of AI data centres go?</h1><p class='lead'>Every number in the episode, in the order it is spoken: the source, the exact quote, and for computed figures the arithmetic. Figures as of September 2026. Found an error? Open an issue on this site's GitHub repository — corrections are logged below.</p>
+<div class='fact'>
+<p class='said'>“White plumes rising from the roof: up to one and a half litres of water gone into the sky for every kilowatt-hour of heat pushed out.”</p>
+<div class='val'>1.482 L/kWh (heat rejected)</div>
+<div class='meta'>Theoretical water evaporation per kWh of heat rejected in a cooling tower, assuming 100% latent heat rejection at 30°C water temperature</div>
+<div class='src'>Source: <a href='https://www.engineeringtoolbox.com/water-properties-d_1573.html' rel='noopener'>Derived: E/Q = 3600 * f_L / h_fg(T), with h_fg=2429.8 kJ/kg at 30C, f_L=1</a></div>
+<blockquote class=''>derived (3600 kJ/kWh) / (2429.8 kJ/kg) = 1.482 L/kWh at f_L=1</blockquote>
+<div class='meta'>Note: f_L=1 (all heat rejected as latent/evaporation) is a near-upper-bound simplification; real cooling towers reject 80-100% of heat as latent, remainder as sensible heat to air (per pdhonline.com/courses/m320 cross-check), so realistic range is roughly 1.19-1.49 L/kWh-heat at 30C.</div>
+<div class='meta'>Record f004 · source dated 2026-09-24 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“The wind carries it away, and whatever rain it becomes won&#x27;t flow back to the local river or aquifer it was drawn from.”</p>
+<div class='meta'>&#x27;Consumed&#x27; water (USGS consumptive use) is the part of water withdrawn that is evaporated or otherwise removed from the immediate water environment, i.e. it is not returned to the source it was drawn from (that part is &#x27;return flow&#x27;)</div>
+<div class='src'>Source: <a href='https://pubs.usgs.gov/circ/2004/circ1268/htdocs/text-glossary.html' rel='noopener'>USGS Circular 1268, Estimated Use of Water in the United States in 2000 — Glossary</a></div>
+<blockquote class=''>consumptive use — the part of water withdrawn that is evaporated, transpired, incorporated into products or crops, consumed by humans or livestock, or otherwise removed from the immediate water environment.</blockquote>
+<div class='meta'>Note: Verified against the primary page (curl). Same wording in the USGS Water Science School glossary. LBNL&#x27;s 66 bn L (f042) and ~800 bn L (f044) are consumption figures.</div>
+<div class='meta'>Record f071 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“And about two-thirds of the new data centres built in America since 2022 sit in places already under high water stress.”</p>
+<div class='val'>about two-thirds share of new US data centres since 2022</div>
+<div class='meta'>About two-thirds of new US data centres built or in development since 2022 are in places with high levels of water stress (WRI Aqueduct baseline water stress + DC Byte facility data)</div>
+<div class='src'>Source: <a href='https://www.bloomberg.com/graphics/2025-ai-impacts-data-centers-water-data/' rel='noopener'>Bloomberg News, &#x27;AI Is Draining Water From Areas That Need It Most&#x27; (Nicoletti, Ma, Bass), 8 May 2025</a></div>
+<blockquote class=''>Bloomberg News found that about two-thirds of new data centers built or in development since 2022 are in places already gripped by high levels of water stress.</blockquote>
+<div class='meta'>Note: Verified on the live Bloomberg page (curl). Global context: S&amp;P Global Sustainable1 (Sep 2025) says 43% of data centres globally operate in high water-stress areas (not independently fetched).</div>
+<div class='meta'>Record f073 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Inside every AI chip, billions of microscopic switches flip on and off.”</p>
+<div class='val'>336 billion transistors</div>
+<div class='meta'>NVIDIA&#x27;s Rubin data-centre GPU contains 336 billion transistors (clock speed not officially published)</div>
+<div class='src'>Source: <a href='https://developer.nvidia.com/blog/inside-nvidia-rubin-gpu-architecture-powering-the-era-of-agentic-ai/' rel='noopener'>NVIDIA Technical Blog, &#x27;Inside NVIDIA Rubin GPU Architecture&#x27;</a></div>
+<blockquote class=''>Its 336 billion transistors, 224 streaming multiprocessors (SMs), and 896 Tensor Cores provide the raw compute density.</blockquote>
+<div class='meta'>Note: Blackwell B200: 208 billion (NVIDIA).</div>
+<div class='meta'>Record f070 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Every flip spends a little energy, and every electron pushed through the metal collides with atoms, shaking them faster.”</p>
+<div class='val'>switching energy -&gt; heat mechanism</div>
+<div class='meta'>Every time a CMOS gate switches, a tiny capacitance is charged or discharged; on a rising edge half the energy drawn from the supply is dissipated as heat in the pMOS transistor, and on the falling edge the stored energy is dumped to ground as heat in the nMOS transistor (dynamic power P = alpha*C*V^2*f)</div>
+<div class='src'>Source: <a href='https://pages.hmc.edu/harris/cmosvlsi/4e/lect/lect7.pdf' rel='noopener'>Harvey Mudd College, CMOS VLSI Design, Lecture 7 (Power)</a></div>
+<blockquote class=''>Half the energy from VDD is dissipated in the pMOS transistor as heat, other half stored in capacitor ... Energy in capacitor is dumped to GND ... Dissipated as heat in the nMOS transistor.</blockquote>
+<div class='meta'>Note: Retrieved via Perplexity; standard textbook result (Weste &amp; Harris).</div>
+<div class='meta'>Record f067 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“That shaking is heat.”</p>
+<div class='val'>electron-lattice scattering -&gt; heat mechanism</div>
+<div class='meta'>Joule heating at the microscopic level: electrons driven by the electric field repeatedly collide/scatter with the atoms (lattice vibrations, phonons) and hand them their energy, making the atoms vibrate faster, which is heat</div>
+<div class='src'>Source: <a href='https://farside.ph.utexas.edu/teaching/302l/lectures/node59.html' rel='noopener'>University of Texas at Austin, Energy in DC Circuits; Pop &amp; Goodson (Stanford), Thermal phenomena in nanoscale transistors</a></div>
+<blockquote class=''>Electrical energy is converted into heat (i.e., random motion of the atoms which make up the resistor) as the electrically accelerated free electrons inside the resistor collide with the atoms</blockquote>
+<div class='meta'>Note: Second source: https://poplab.stanford.edu/pdfs/pop-goodson-itherm04.pdf</div>
+<div class='meta'>Record f068 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Add it all up, and virtually all the electricity a computer consumes ends up as heat.”</p>
+<div class='val'>virtually all share of IT electricity</div>
+<div class='meta'>Virtually all electricity consumed by IT equipment in a data centre is converted into heat, which must be removed</div>
+<div class='src'>Source: <a href='https://intelligence.uptimeinstitute.com/pdf-download/node/1017' rel='noopener'>Uptime Institute Intelligence, &#x27;Heat reuse: a management primer&#x27; (UII Report 114M, Oct 2023)</a></div>
+<blockquote class=''>Virtually all the electricity consumed by IT is converted into heat, the effective removal of which is one of the primary objectives of data center facilities.</blockquote>
+<div class='meta'>Note: Quote retrieved via Perplexity Agent API; consistent with conservation of energy. Re-open PDF before publishing.</div>
+<div class='meta'>Record f066 · source dated 2026-09-24 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“And its servers insist on cool intake air, between 18 and 27 degrees Celsius.”</p>
+<div class='val'>18-27°C recommended; 15-32°C allowable °C dry-bulb</div>
+<div class='meta'>ASHRAE recommended and allowable temperature envelope for Class A1 IT equipment (air-cooled)</div>
+<div class='src'>Source: <a href='https://www.ashrae.org/file%20library/technical%20resources/bookstore/supplemental%20files/therm-gdlns-5th-r-e-refcard.pdf' rel='noopener'>ASHRAE TC 9.9, &#x27;Thermal Guidelines for Data Processing Environments,&#x27; 5th Edition reference card (2021)</a></div>
+<blockquote class=''>Recommended (suitable for Classes A1 to A4)... A1 to A4, 18 to 27 [C]... Class A1... Allowable product-operation temperature 15-32 C</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF. Classes A2-A4 progressively widen the allowable range (A2: 10-35C, A3: 5-40C, A4: 5-45C). Wider allowable ranges increase hours of &#x27;free cooling&#x27;/economization, which reduces mechanical cooling energy - but ASHRAE&#x27;s whitepaper does not itself claim this reduces water use; evaporative/adiabatic assist still consumes water during hot hours (see notes).</div>
+<div class='meta'>Record f014 · source dated 2021-01-01 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“So in 2023, America&#x27;s data centres consumed about 66 billion litres of water on site.”</p>
+<div class='val'>66 billion liters (~17.4 billion gallons) billion liters / billion US gallons</div>
+<div class='meta'>US data center DIRECT/on-site water consumption, 2023 - the primary source behind the widely-repeated &#x27;17 billion gallons&#x27; claim</div>
+<div class='src'>Source: <a href='https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf' rel='noopener'>LBNL, &#x27;2024 United States Data Center Energy Usage Report&#x27;</a></div>
+<blockquote class=''>By 2023, hyperscale and colocation account for 84% of the 66-billion-liter total, while internal data centers fell to just 12%, driven by water efficiency improvements.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF, line 1090. The &#x27;17 billion gallons&#x27; figure widely quoted in 2026 press (e.g. The Register, Aug 2026) is a rounding of this 66-billion-liter/17.4-billion-gallon LBNL figure, popularized via the Congressional Research Service&#x27;s paraphrase (CRS report R49057: &#x27;approximately 17 billion gallons of water in 2023, compared with 5.6 billion gallons in 2014&#x27;). Crucially, this is DIRECT/ON-SITE water only - it excludes the much larger indirect/electricity-generation water footprint (see f044).</div>
+<div class='meta'>Record f042 · source dated 2024-12-19 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Triple what they used a decade earlier.”</p>
+<div class='val'>21.2 billion liters (~5.6 billion gallons) billion liters / billion US gallons</div>
+<div class='meta'>US data center DIRECT/on-site water consumption, 2014 (baseline for the &#x27;tripled in a decade&#x27; framing)</div>
+<div class='src'>Source: <a href='https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf' rel='noopener'>LBNL, &#x27;2024 United States Data Center Energy Usage Report&#x27;</a></div>
+<blockquote class=''>In 2014, data centers consumed 21.2 billion liters of water, with 64% in internal data centers.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF, same sentence as f042. 66/21.2 = 3.11x growth in direct water consumption 2014-2023, which is the basis for &#x27;(US data centers) tripled their water footprint in 10 years&#x27; headlines.</div>
+<div class='meta'>Record f043 · source dated 2024-12-19 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Because behind this building lies a quiet engineering trade, and an invisible water footprint roughly twelve times larger.”</p>
+<div class='val'>nearly 800 billion liters (~211 billion gallons) billion liters / billion US gallons</div>
+<div class='meta'>US data center INDIRECT (electricity-generation-related) water consumption, 2023 - the much larger footprint usually left out of the &#x27;17 billion gallons&#x27; headline</div>
+<div class='src'>Source: <a href='https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf' rel='noopener'>LBNL, &#x27;2024 United States Data Center Energy Usage Report&#x27;</a></div>
+<blockquote class=''>The total indirect water footprint of U.S. data centers is nearly 800 billion liters, attributed to water consumed indirectly through electricity use, based on the regional electricity grid mix for U.S. data center locations.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF, line 1108. This indirect figure is roughly 12x the direct/on-site figure (f042) - i.e. the popularized &#x27;17 billion gallons&#x27; headline captures under 8% of data centers&#x27; full water footprint. This gap is one of the episode&#x27;s central &#x27;aha&#x27; points.</div>
+<div class='meta'>Record f044 · source dated 2024-12-19 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Evaporating a single kilogram of water soaks up as much heat as a one-kilowatt space heater puts out in forty minutes.”</p>
+<div class='val'>2429.8 kJ/kg</div>
+<div class='meta'>Latent heat of vaporization of water at 30°C</div>
+<div class='src'>Source: <a href='https://www.engineeringtoolbox.com/water-properties-d_1573.html' rel='noopener'>Engineering ToolBox water-properties table</a></div>
+<blockquote class=''>30 C, 43774 J/mol, 2429.8 kJ/kg, 674.94 Wh/kg</blockquote>
+<div class='meta'>Note: 30C is a representative cooling-tower cold-water/return temperature. Used as the default h_fg in model.md.</div>
+<div class='meta'>Record f002 · source dated 2026-09-24 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Evaporating a single kilogram of water soaks up as much heat as a one-kilowatt space heater puts out in forty minutes.”</p>
+<div class='val'>~40 minutes minutes of a 1 kW heater</div>
+<div class='meta'>COMPUTED: energy absorbed by evaporating 1 kg of water at 30 C, expressed as running time of a 1 kW space heater</div>
+<div class='src'>Source: <a href='https://www.engineeringtoolbox.com/water-properties-d_1573.html' rel='noopener'>Computed from f002 (2429.8 kJ/kg)</a></div>
+<blockquote class='calc'>2429.8 kJ/kg</blockquote>
+<div class='meta'>Note: 2429.8 kJ / 3600 = 0.675 kWh; at 1 kW that is 0.675 h = 40.5 min. Derivative of f002; no new source.</div>
+<div class='meta'>Record f065 · source dated 2026-09-24 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“But dry cooling needs roughly two and a half times the fan and pump power of an evaporative cooling tower to dump the same heat.”</p>
+<div class='val'>0.045 kWe/kWth (dry) vs. 0.018 kWe/kWth (open wet tower) vs. 0.033 kWe/kWth (closed wet tower) kW electric per kW thermal (heat rejection equipment only)</div>
+<div class='meta'>Seasonal-average heat-rejection electricity use: dry cooling vs. wet cooling tower (peer-reviewed comparison citing German building-energy standards)</div>
+<div class='src'>Source: <a href='https://www.mdpi.com/1996-1073/16/9/3661' rel='noopener'>MDPI Energies journal, &#x27;Free Cooling for Saving Energy: Technical Market Analysis of Dry, Wet, and Hybrid Cooling Based on Manufacturer Data&#x27;</a></div>
+<blockquote class=''>Dry heat rejection: 0.045 kWe/kWth; Open wet cooling tower: 0.018 kWe/kWth; Closed wet cooling tower: 0.033 kWe/kWth.</blockquote>
+<div class='meta'>Note: Dry heat rejection uses ~2.5x the fan/pump electricity of an open wet cooling tower (0.045/0.018) on this seasonal-average basis. These are heat-rejection-EQUIPMENT-only values (fans and pumps), not full chiller-plant power - do not present as &#x27;total data center PUE delta.&#x27; This is the core physical trade-off the episode&#x27;s dial/model visualizes.</div>
+<div class='meta'>Record f047 · source dated 2026-09-24 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“Power stations that burn fuel or split atoms evaporate water to cool themselves too.”</p>
+<div class='val'>1.8 L/kWh (0.47 gal/kWh)</div>
+<div class='meta'>NREL 2003 aggregate estimate: fresh water evaporated per kWh of end-use electricity across the whole US thermoelectric fleet</div>
+<div class='src'>Source: <a href='https://docs.nrel.gov/docs/fy04osti/33905.pdf' rel='noopener'>NREL/TP-550-33905, Torcellini, Long &amp; Judkoff, &#x27;Consumptive Water Use for U.S. Power Production&#x27; (2003)</a></div>
+<blockquote class=''>In thermoelectric plants, 0.47 gal (1.8 L) of fresh water is evaporated per kWh of electricity consumed at the point of end use.</blockquote>
+<div class='meta'>Note: This is an older (2003) national aggregate across all thermoelectric plants and cooling types, adjusted for ~5% plant self-use and ~9% transmission/distribution losses - so the denominator is end-use kWh, not generator-output kWh. Not directly comparable to the fuel/cooling-specific USGS 2015 coefficients (f016-f018) without this adjustment. Note: this is the same 1.8 L/kWh figure The Green Grid&#x27;s 2011 WUE whitepaper cites as its US-average EWIF (traced to this same NREL study) - i.e., not an independent replication, just the same number propagating through later documents.</div>
+<div class='meta'>Record f019 · source dated 2003-01-01 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“A gas plant with a cooling tower evaporates about two-thirds of a litre for every kilowatt-hour it makes.”</p>
+<div class='val'>0.68 L/kWh (0.18 gal/kWh)</div>
+<div class='meta'>US water CONSUMPTION coefficient for natural-gas combined-cycle (NGCC) generation with recirculating cooling tower (2015)</div>
+<div class='src'>Source: <a href='https://pubs.usgs.gov/sir/2019/5103/sir20195103.pdf' rel='noopener'>USGS Scientific Investigations Report 2019-5103, &#x27;Withdrawal and Consumption of Water by Thermoelectric Power Plants in the United States, 2015&#x27;</a></div>
+<blockquote class=''>Table 7 (Consumption coefficients by generation and cooling-system technology types for thermoelectric power plants in the United States, 2010 and 2015): all values in gallons per kilowatthour.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF. NGCC is the marginal/dominant grid fuel in most US data-center regions; this coefficient underlies the &#x27;grid electricity has a water footprint too&#x27; argument in the model. Withdrawal (as opposed to consumption) for the same plant type is far higher (~0.95 L/kWh) because withdrawal counts water that is returned to the source.</div>
+<div class='meta'>Record f016 · source dated 2019-01-01 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Coal and nuclear, two to three times as much.”</p>
+<div class='val'>1.51 L/kWh (0.40 gal/kWh)</div>
+<div class='meta'>US water CONSUMPTION coefficient for coal-fired generation with recirculating cooling tower (2015)</div>
+<div class='src'>Source: <a href='https://pubs.usgs.gov/sir/2019/5103/sir20195103.pdf' rel='noopener'>USGS Scientific Investigations Report 2019-5103</a></div>
+<blockquote class=''>Table 7, coal recirculating-tower consumption coefficient, 2015: 0.40 gal/kWh.</blockquote>
+<div class='meta'>Note: Coal is roughly 2.2x more water-consumptive per kWh than NGCC recirculating-tower generation, per this same USGS table.</div>
+<div class='meta'>Record f017 · source dated 2019-01-01 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Coal and nuclear, two to three times as much.”</p>
+<div class='val'>1.89 L/kWh (0.50 gal/kWh)</div>
+<div class='meta'>US water CONSUMPTION coefficient for nuclear generation with recirculating cooling tower (2015)</div>
+<div class='src'>Source: <a href='https://pubs.usgs.gov/sir/2019/5103/sir20195103.pdf' rel='noopener'>USGS Scientific Investigations Report 2019-5103</a></div>
+<blockquote class=''>Table 7, nuclear recirculating-tower consumption coefficient, 2015: 0.50 gal/kWh.</blockquote>
+<div class='meta'>Note: Highest of the three major thermoelectric fuel types in this table on a per-kWh consumption basis, because nuclear plants reject more waste heat per kWh generated (lower thermal efficiency) than modern NGCC plants.</div>
+<div class='meta'>Record f018 · source dated 2019-01-01 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“A reservoir loses water to the sun, and depending on how much of that loss you charge to the electricity, it can reach dozens of litres per kilowatt-hour.”</p>
+<div class='meta'>Indirect (power-generation) water consumption includes both thermoelectric cooling and evaporation from the open surface of hydroelectric reservoirs</div>
+<div class='src'>Source: <a href='https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf' rel='noopener'>LBNL, 2024 United States Data Center Energy Usage Report, indirect water section</a></div>
+<blockquote class=''>Thermoelectric plants require significant cooling, while hydroelectric reservoirs lose water through open surface evaporation, leading to water consumption that impacts local resources.</blockquote>
+<div class='meta'>Note: From the locally saved report text (sources/lbnl-2024-report.md, line 1098). Explains why the grid-average 4.52 L/kWh (f020) can exceed any single thermal plant&#x27;s cooling coefficient (f016-f018).</div>
+<div class='meta'>Record f075 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“A reservoir loses water to the sun, and depending on how much of that loss you charge to the electricity, it can reach dozens of litres per kilowatt-hour.”</p>
+<div class='val'>0-18,000 gal/MWh</div>
+<div class='meta'>Operational water consumption attributed to hydropower ranges from 0 to about 18,000 gal/MWh (≈ up to 68 L/kWh) depending on how reservoir evaporation is allocated to power production — far above thermoelectric plants (0 to ~1,200 gal/MWh)</div>
+<div class='src'>Source: <a href='https://iopscience.iop.org/article/10.1088/1748-9326/7/4/045802' rel='noopener'>Macknick et al. (NREL), Environ. Res. Lett. 7 (2012) 045802</a></div>
+<blockquote class=''>As the range of values for hydropower consumption range from 0 to 18 000 gal MW-1 h-1, we provide tabular data but do not include the large range in the figures, where consumption ranges from 0 to approximately 1200 gal MW-1 h-1.</blockquote>
+<div class='meta'>Note: Verified in the downloaded PDF (work/src/macknick.pdf). Estimates depend on allocation method (&#x27;allocate all reservoir evaporation to power production&#x27;); say &#x27;up to dozens of litres, depending on how you count&#x27;.</div>
+<div class='meta'>Record f076 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Wind turbines use none, and solar panels almost none.”</p>
+<div class='val'>wind 0; PV 1 (median, range 0-5) gal/MWh operational consumption</div>
+<div class='meta'>Operational water consumption of wind turbines is 0 gal/MWh and of utility-scale solar PV about 1 gal/MWh (median); non-thermal renewables such as PV and wind have the lowest water consumption factors of all generating technologies</div>
+<div class='src'>Source: <a href='https://iopscience.iop.org/article/10.1088/1748-9326/7/4/045802' rel='noopener'>Macknick, Newmark, Heath &amp; Hallett (NREL), &#x27;Operational water consumption and withdrawal factors for electricity generating technologies&#x27;, Environ. Res. Lett. 7 (2012) 045802, Table 1</a></div>
+<blockquote class=''>Table 1. Water consumption factors for renewable technologies (gal MW-1 h-1): Utility scale PV 1 (min 0, max 5); Wind turbine 0 (0, 0). ... non-thermal renewables, such as photovoltaics and wind, have the lowest water consumption factors.</blockquote>
+<div class='meta'>Note: Verified against the downloaded PDF (openei.org copy). A Perplexity answer said PV = 26 gal/MWh — wrong (26 is a CSP trough value in the same table).</div>
+<div class='meta'>Record f074 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Blend those sources across the grids that feed America&#x27;s data centres, and every kilowatt-hour carries a hidden water bill of about 4.5 litres.”</p>
+<div class='val'>4.52 L/kWh</div>
+<div class='meta'>LBNL&#x27;s calculated 2023 US national-average indirect (electricity-generation) water-consumption intensity attributable to data-center electricity use</div>
+<div class='src'>Source: <a href='https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf' rel='noopener'>LBNL, &#x27;2024 United States Data Center Energy Usage Report&#x27;</a></div>
+<blockquote class=''>In 2023, energy consumption by a data center translates to national average of 4.52 L/kWh of indirect water consumption, along with 0.34 kg/kWh emissions. In comparison, the average water intensity factor for electricity use in the U.S. overall is 4.35 L/kWh.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF, line 1108. This is higher than the plant-level USGS coefficients (f016-f018) because it is grid-mix-weighted for the specific regions where US data centers are concentrated (which include more water-intensive generation than the US average in some regions), and reflects 2023 conditions rather than 2015.</div>
+<div class='meta'>Record f020 · source dated 2024-12-19 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Inside the building, the national average is about 0.36 litres.”</p>
+<div class='val'>0.36 (through 2023); 0.45-0.48 (2024-2028 projected) L/kWh (IT energy)</div>
+<div class='meta'>LBNL modeled US average site WUE (direct/on-site) through 2023, and projected 2024-2028</div>
+<div class='src'>Source: <a href='https://eta-publications.lbl.gov/sites/default/files/2024-12/lbnl-2024-united-states-data-center-energy-usage-report_1.pdf' rel='noopener'>LBNL, &#x27;2024 United States Data Center Energy Usage Report&#x27; (Shehabi et al., Dec 2024)</a></div>
+<blockquote class=''>The shift toward hyperscale and colocation data centers results in an increase in the overall average WUE, which stays just over 0.36 L/kWh through 2023, as shown in Figure 4.7. After 2023, the average WUE rises slightly, reaching between 0.45 and 0.48 L/kWh, reflecting increasing WUEs in the hyperscale and colocation data centers, along with the increased water consumption of liquid-cooled systems.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF (sources/lbnl-2024-report.md, line 1025). LBNL&#x27;s WUE here is a national fleet-wide average across ~1 million simulated scenarios covering 18 data-center-type/cooling-system combinations, not a single facility&#x27;s value.</div>
+<div class='meta'>Record f013 · source dated 2024-12-19 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“It depends on where you draw the line.”</p>
+<div class='val'>0.26 mL (Google Gemini, on-site only) to &gt;500 mL (Washington Post/Ren framing, on-site+off-site) mL per query, varies by boundary</div>
+<div class='meta'>Comparative table of publicly disclosed/estimated water-per-AI-query figures and their measurement boundaries (as of Sept 2026)</div>
+<div class='src'>Source: <a href='https://www.washingtonpost.com/climate-environment/2025/08/26/ai-climate-costs-efficiency/' rel='noopener'>Washington Post, &#x27;ChatGPT is an energy guzzler...&#x27; (Aug 26, 2025)</a></div>
+<blockquote class=''>Just one question-and-answer interaction with a substantial language model (LLM) can utilize over half a liter of water to keep servers cool.</blockquote>
+<div class='meta'>Note: This spread (roughly 2000x between the lowest and highest published per-query figures) is almost entirely explained by differing measurement boundaries (on-site only vs. on-site+off-site electricity water; median vs. worst-case; short vs. long response; different models/years) rather than any single figure being &#x27;wrong&#x27; - this is the central methodological lesson for the episode&#x27;s per-query segment. LOW-CONFIDENCE data point for context only: OpenAI CEO Sam Altman separately stated in June 2025 that &#x27;the average ChatGPT query uses 0.34 Wh and about one fifteenth of a teaspoon of water&#x27; (~0.32 mL) - but Altman&#x27;s disclosure specifies no model version, prompt length, location, or calculation boundary, so it should not be treated as methodologically comparable to Google&#x27;s or Mistral&#x27;s published figures.</div>
+<div class='meta'>Record f037 · source dated 2025-08-26 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“Google says a median Gemini text prompt uses 0.26 millilitres of water, a few drops.”</p>
+<div class='val'>0.24 Wh energy / 0.03 gCO2e / 0.26 mL water per median text prompt</div>
+<div class='meta'>Google&#x27;s own reported energy, carbon and water footprint of the median Gemini Apps text prompt (comprehensive methodology, May 2025 data)</div>
+<div class='src'>Source: <a href='https://services.google.com/fh/files/misc/measuring_the_environmental_impact_of_delivering_ai_at_google_scale.pdf' rel='noopener'>Google, &#x27;Measuring the environmental impact of delivering AI at Google Scale&#x27;</a></div>
+<blockquote class=''>For Google&#x27;s Gemini Apps products, a median text prompt consumes 0.24 Wh of energy, generates 0.03 gCO2e, and consumes 0.26 mL of water.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF. Google explicitly cautions: &#x27;These findings do not represent the specific environmental impact for all Gemini App text-generation prompts nor are they indicative of future performance&#x27; and &#x27;the data and claims have not been verified by an independent third-party.&#x27; A narrower boundary (active accelerator power only, excluding idle capacity/overhead) gives 0.10 Wh / 0.12 mL - roughly half - illustrating how sensitive these figures are to accounting boundary.</div>
+<div class='meta'>Record f025 · source dated 2025-08-21 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Critics pointed out that this counts only the water at Google&#x27;s own sites, not at the power stations.”</p>
+<div class='val'>onsite-only water compared against studies that include off-site electricity-generation water qualitative (methodology critique)</div>
+<div class='meta'>Independent critique of Google&#x27;s 0.26 mL per-prompt water figure</div>
+<div class='src'>Source: <a href='https://www.theregister.com/special-features/2025/08/22/google-games-numbers-to-make-ai-look-less-thirsty/277080' rel='noopener'>The Register, &#x27;Google games numbers to make AI look less thirsty&#x27; (Aug 22, 2025), quoting UC Riverside researcher Shaolei Ren</a></div>
+<blockquote class=''>The issue... isn&#x27;t that Google failed to consider off-site water consumption entirely. It&#x27;s that the search giant compared apples to oranges: Its new figure is onsite only, while the &#x27;discredited&#x27; figure included all water consumption.</blockquote>
+<div class='meta'>Note: This is a secondary (journalistic) source, but it directly quotes the named academic critic (co-author of f027/f028&#x27;s arXiv paper) and Google&#x27;s own on-record rebuttal in the same article (&#x27;our team of water resource engineers and hydrologists has concluded the claims and methods are flawed&#x27;). Presented as a live methodological dispute, not resolved fact, per task instructions on marking disputed figures.</div>
+<div class='meta'>Record f026 · source dated 2025-08-22 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“Count both, and one study puts a medium-length GPT-3 answer at about 2.2 millilitres on site and 14.7 at the power station: nearly 17 millilitres in all, about a tablespoon.”</p>
+<div class='val'>2.2 mL on-site + 14.704 mL off-site = 16.904 mL total mL per request</div>
+<div class='meta'>Making AI Less Thirsty paper&#x27;s detailed US-average water-per-request breakdown for a modeled medium-length GPT-3 response</div>
+<div class='src'>Source: <a href='https://arxiv.org/pdf/2304.03271v5' rel='noopener'>Li, Yang, Islam &amp; Ren, arXiv:2304.03271v5</a></div>
+<blockquote class=''>[Table 1, U.S. Average row] On-site water per request: 2.200 mL; Off-site water per request: 14.704 mL; Total: 16.904 mL; Requests per 500 mL: 29.6</blockquote>
+<div class='meta'>Note: About 87% of this US-average operational footprint is off-site (electricity-generation) water, only 13% is on-site cooling water - directly supports the episode&#x27;s &#x27;most of AI&#x27;s water footprint isn&#x27;t at the data center, it&#x27;s at the power plant&#x27; argument.</div>
+<div class='meta'>Record f034 · source dated 2025-03-26 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Count both, and one study puts a medium-length GPT-3 answer at about 2.2 millilitres on site and 14.7 at the power station: nearly 17 millilitres in all, about a tablespoon.”</p>
+<div class='val'>14.8 mL; 44 mL mL</div>
+<div class='meta'>Reference volumes: a US tablespoon is about 14.8 mL; a standard US shot (1.5 fl oz) is about 44 mL</div>
+<div class='src'>Source: <a href='https://www.nist.gov/pml/owm/approximate-conversions-us-customary-measures-metric' rel='noopener'>NIST Office of Weights and Measures, US customary to metric conversions (1 tbsp = 14.8 mL; 1 fl oz = 29.57 mL)</a></div>
+<blockquote class=''>1 tablespoon = 14.8 mL; 1 fluid ounce = 29.57 mL (x 1.5 = 44.4 mL)</blockquote>
+<div class='meta'>Note: Used only as everyday scale: 17 mL ≈ &#x27;about a tablespoon&#x27;, 45 mL ≈ &#x27;about a shot glass&#x27;.</div>
+<div class='meta'>Record f079 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Mistral&#x27;s report puts a page-long answer from its large model at about 45 millilitres, a shot glass.”</p>
+<div class='val'>45 mL of water</div>
+<div class='meta'>Independently audited water footprint of a single Mistral Large 2 response (400 tokens)</div>
+<div class='src'>Source: <a href='https://www.theregister.com/software/2025/07/24/mistral-report-confirms-ai-is-a-hungry-thirsty-beast/1390669' rel='noopener'>The Register, &#x27;Mistral AI environmental report confirms AI is a hungry, thirsty beast&#x27; (Jul 24, 2025), reporting Mistral&#x27;s audited LCA</a></div>
+<blockquote class=''>To synthesize a 400-token response - about a page worth of text - Mistral Large 2 consumed about 45 ml of water and generated about 1.14 grams of CO2e.</blockquote>
+<div class='meta'>Note: This is a broader life-cycle assessment (conducted with Carbone 4 and France&#x27;s ADEME environmental agency) covering the model&#x27;s full 18-month training-plus-inference lifecycle, not a single-facility operational-only measurement like Google&#x27;s Gemini figure - so it is NOT directly comparable to f025&#x27;s 0.26 mL without adjusting for scope. Mistral states 91% of total water consumption came from training and inference combined.</div>
+<div class='meta'>Record f036 · source dated 2025-07-24 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“Even 17 millilitres is tiny next to the 310 litres an average American uses in a day.”</p>
+<div class='val'>16.9 mL is about 0.0054% of one person&#x27;s daily 82-gallon (310-liter) water use ratio, arithmetic shown</div>
+<div class='meta'>COMPUTED comparison: one US-average request/response water footprint per the arXiv paper (f034) expressed against EPA&#x27;s average per-capita daily water use</div>
+<div class='src'>Source: <a href='https://arxiv.org/pdf/2304.03271v5' rel='noopener'>Computed from f034 (16.904 mL/request) and USGS 82 gallons/person/day (310.4 L/person/day)</a></div>
+<div class='src'>Also: <a href='https://www.epa.gov/watersense/statistics-and-facts' rel='noopener'>EPA WaterSense: statistics and facts (82 gal per person per day at home, USGS 2015 data)</a></div>
+<blockquote class='calc'>16.904 mL / 310,400 mL (82 gal in mL) = 0.0000545 = 0.0054%.</blockquote>
+<div class='meta'>Note: Illustrates that even the higher-end &#x27;off-site included&#x27; per-query figure is minuscule next to one person&#x27;s daily household water use - useful as a counterweight to the golf-course/pool comparisons above, which make the AGGREGATE national footprint look large. Both framings are arithmetically consistent; the episode should show both to avoid a one-sided takeaway.</div>
+<div class='meta'>Record f063 · source dated 2026-09-24 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“But ChatGPT alone gets about 2.5 billion questions a day.”</p>
+<div class='val'>2.5 billion prompts per day</div>
+<div class='meta'>ChatGPT receives about 2.5 billion prompts a day from users worldwide (OpenAI, July 2025; ~330 million from the US)</div>
+<div class='src'>Source: <a href='https://techcrunch.com/2025/07/21/chatgpt-users-send-2-5-billion-prompts-a-day/' rel='noopener'>TechCrunch (21 Jul 2025), reporting OpenAI&#x27;s figures given to Axios; confirmed to The Verge by an OpenAI spokesperson</a></div>
+<blockquote class=''>ChatGPT receives 2.5 billion prompts from global users every day, OpenAI told Axios. About 330 million of those are coming from users in the U.S.</blockquote>
+<div class='meta'>Note: Verified on the live TechCrunch page (curl). Latest official total as of Sept 2026 per Perplexity search; no newer official figure found.</div>
+<div class='meta'>Record f077 · source dated 2026-09-25 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“At 17 millilitres each, that would be around 17 Olympic pools, every single day.”</p>
+<div class='val'>~17 Olympic pools per day arithmetic shown</div>
+<div class='meta'>COMPUTED illustration: 2.5 billion prompts/day (f077) x 16.9 mL per request (f034) ≈ 42 million litres/day ≈ 17 Olympic pools/day</div>
+<div class='src'>Computed from f077, f034 and f056 (2,500,000 L/pool)</div>
+<blockquote class='calc'>2,500,000,000 x 16.904 mL = 42,260,000 L/day; / 2,500,000 L per pool = 16.9 pools/day</blockquote>
+<div class='meta'>Note: Illustrative only: 16.9 mL is a modeled GPT-3 US-average figure, not a measured ChatGPT value. Narration must say &#x27;would be&#x27; / &#x27;at that rate&#x27;.</div>
+<div class='meta'>Record f078 · source dated 2026-09-25 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“Microsoft says each of its new AI data centres built this way will save more than 125 million litres of water a year, at the cost of a small increase in electricity use.”</p>
+<div class='val'>125 million liters saved per facility per year</div>
+<div class='meta'>Microsoft&#x27;s claimed water saving per facility from its direct-to-chip liquid-cooling AI datacenter design (vs. its FY24 global average evaporative WUE)</div>
+<div class='src'>Source: <a href='https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/12/09/sustainable-by-design-next-generation-datacenters-consume-zero-water-for-cooling/' rel='noopener'>Microsoft, &#x27;Sustainable by design: Next-generation datacenters consume zero water for cooling&#x27; (Dec 9, 2024)</a></div>
+<blockquote class=''>By adopting chip-level cooling solutions, we deliver precise temperature control without water evaporation, saving over 125,000 cubic meters of water annually per datacenter, based on our FY24 global average withdrawal water usage effectiveness (WUE) of 0.30 L/kWh.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary source. Microsoft explicitly states the electricity trade-off in the same post: &#x27;Replacement of evaporative systems with mechanical cooling will increase our power usage effectiveness (PUE)... The result is a nominal increase in our annual energy usage compared to our evaporative datacenter designs across the global fleet&#x27; - i.e. Microsoft&#x27;s own disclosure confirms the water-for-electricity trade this episode is about.</div>
+<div class='meta'>Record f029 · source dated 2024-12-09 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“At a US National Renewable Energy Laboratory data centre, liquid cooling plus a dry heat-rejection path cut the water its cooling towers would have used roughly in half.”</p>
+<div class='val'>0.7 (actual, hybrid) vs. 1.42 (estimated, cooling-towers-only) L/kWh (IT energy)</div>
+<div class='meta'>NREL ESIF data center: measured WUE with hybrid/thermosyphon liquid cooling vs. an internally estimated cooling-tower-only counterfactual</div>
+<div class='src'>Source: <a href='https://www.nrel.gov/docs/fy19osti/74145.pdf' rel='noopener'>NREL, &#x27;Soaking up Energy Savings from Water Projects: NREL ESIF Data Center Water Use Reductions&#x27;</a></div>
+<blockquote class=''>Annual Heat Rejection - with only cooling towers, WUE = 1.42 liters/kWh... [actual hybrid system] WUE = 0.7 liters/kWh.</blockquote>
+<div class='meta'>Note: Implies roughly 51% site water reduction (1 - 0.7/1.42 = 50.7%) from adding liquid cooling with a thermosyphon/hybrid heat-rejection path versus a cooling-tower-only counterfactual - but this facility still uses cooling towers for part of its heat rejection, so it is NOT a &#x27;liquid cooling eliminates water use&#x27; data point; it&#x27;s a partial-substitution data point.</div>
+<div class='meta'>Record f046 · source dated 2019-01-01 · confidence medium</div>
+</div>
+<div class='fact'>
+<p class='said'>“And for the first time, someone is making them count: Europe since 2024, and California from 2027.”</p>
+<div class='val'>Commission Delegated Regulation (EU) 2024/1364, in force since 17 May 2024 regulation, dates</div>
+<div class='meta'>The actual binding EU legal instrument requiring data-centre energy and water disclosure (correcting the premise that this is a &#x27;September 2026 proposal&#x27;)</div>
+<div class='src'>Source: <a href='https://eur-lex.europa.eu/eli/reg_del/2024/1364/oj/eng' rel='noopener'>Commission Delegated Regulation (EU) 2024/1364 of 14 March 2024 on the first phase of the establishment of a common Union rating scheme for data centres</a></div>
+<blockquote class=''>[Regulation text, Annexes I-III] requires reporting of total energy consumption (EDC), IT-equipment energy consumption (EIT), Power Usage Effectiveness (PUE = EDC/EIT), total water input (WIN) and potable water input (WIN-POT) in cubic metres, and Water Usage Effectiveness (WUE = WIN/EIT, EIT in MWh).</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary EUR-Lex text. Legal basis is the Energy Efficiency Directive (EU) 2023/1791, Articles 12 and 33(3). First reporting deadline was 15 September 2024, then 15 May 2025, annually thereafter. Applies to data centres with installed IT power demand &gt;=500 kW. On 21 September 2026 the European Commission announced a further data-centre energy-efficiency package and is consulting on minimum-performance standards, with a legislative proposal planned for Q2 2027 - that is a DRAFT/future initiative, not yet adopted law; do not present it as already in force.</div>
+<div class='meta'>Record f051 · source dated 2024-05-17 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“And for the first time, someone is making them count: Europe since 2024, and California from 2027.”</p>
+<div class='val'>Chapter 436, Statutes of 2026; effective 1 January 2027 (water-scarcity plan requirement from 1 January 2028) bill number, dates</div>
+<div class='meta'>California AB 2469 (&#x27;Data centers: water use disclosures&#x27;), signed 21 September 2026</div>
+<div class='src'>Source: <a href='https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2469' rel='noopener'>California Legislative Information, AB 2469 (Papan), chaptered text</a></div>
+<blockquote class=''>[Requires] a water-supply assessment, projected water use, proposed water-efficiency measures... covering maximum and average daily/monthly demand, annual demand, water withdrawals, expansion phases, trigger points and full-build-out/peak-operation scenarios, before approval of a new data centre or an expansion increasing maximum peak water use.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary bill text (sources/ca-ab2469-water-disclosure.md). A water-scarcity plan additionally becomes mandatory from 1 January 2028. This is the direct successor to AB 93 (2025), a broader water-disclosure bill that Governor Newsom VETOED on 11 October 2025 - useful on-screen contrast: California tried once in 2025, got vetoed, came back with a narrower/negotiated version in 2026 that passed.</div>
+<div class='meta'>Record f053 · source dated 2026-09-21 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“And for the first time, someone is making them count: Europe since 2024, and California from 2027.”</p>
+<div class='val'>Chapter 437, Statutes of 2026; effective 1 January 2027 bill number, dates</div>
+<div class='meta'>California AB 2619 (&#x27;Water resources: data centers&#x27;), signed 21 September 2026</div>
+<div class='src'>Source: <a href='https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260AB2619' rel='noopener'>California Legislative Information, AB 2619 (Papan), chaptered text</a></div>
+<blockquote class=''>[Requires] data-centre owners/operators to provide water suppliers and local governments with projected water-use information before an initial business licence or permit... Upon renewal, operators must report prior-year water use, including total/direct water use and the type of water and cooling system.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary bill text (sources/ca-ab2619-water-resources.md). Also requires urban water suppliers to account for data-centre demand in their own water-supply and water-shortage contingency planning - i.e. pushes the reporting burden onto both the data-center operator AND the local utility.</div>
+<div class='meta'>Record f054 · source dated 2026-09-21 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Google says that of every ten litres its data centres take in, about eight are evaporated in the cooling towers.”</p>
+<div class='val'>1.15 L/kWh</div>
+<div class='meta'>Google&#x27;s fleet-wide freshwater Water Usage Effectiveness (WUE Category 2, consumptive-use basis), used in its Gemini per-prompt methodology</div>
+<div class='src'>Source: <a href='https://services.google.com/fh/files/misc/measuring_the_environmental_impact_of_delivering_ai_at_google_scale.pdf' rel='noopener'>Google, &#x27;Measuring the environmental impact of delivering AI at Google Scale&#x27; (technical report, Aug 21, 2025)</a></div>
+<blockquote class=''>For both 2023 and 2024, Google&#x27;s WUE Category 2 value was 1.15 L/kWh.</blockquote>
+<div class='meta'>Note: Verified against locally fetched primary PDF (sources/google-ai-scale-report.md). &#x27;WUE Category 2&#x27; = ISO consumptive-use definition (water input minus water returned), not gross withdrawal. Google states &#x27;on average, Google consumes 80% of the water withdrawn.&#x27; No 2025 update to this figure was found in the 2026 Environmental Report - do not extrapolate 1.15 L/kWh forward to 2025.</div>
+<div class='meta'>Record f024 · source dated 2025-08-21 · confidence high</div>
+</div>
+<h2>Corrections</h2><p class='lead'>None so far.</p>
+<footer>Setpoint is a one-person channel. Visuals are illustrations built from these sources; where a figure is modelled or computed, it says so above.</footer></main></body></html>
