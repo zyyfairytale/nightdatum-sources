@@ -1,0 +1,188 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sources · Why a Data Centre Can Be Built Before It Has Enough Power · Night Datum</title><meta name="description" content="Every number in the Night Datum episode &#x27;Why a Data Centre Can Be Built Before It Has Enough Power&#x27;, with its source, the exact quote and the arithmetic.">
+<link rel="icon" href="../mark.svg"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:wght@500&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#10262a;--panel:#10252a;--ice:#9fe8ff;--copper:#e08a4f;--champ:#d9c49a;--text:#e9f6f8;--dim:#9fb4b6}
+*{box-sizing:border-box}html{-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--text);
+font:17px/1.6 'IBM Plex Sans',system-ui,sans-serif}
+main{max-width:860px;margin:0 auto;padding:48px 20px 80px}
+header{display:flex;align-items:center;gap:16px;margin-bottom:36px}header img{width:56px;height:56px}
+header .w{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:28px}header .t{color:var(--champ);font-size:15px}
+h1{font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:36px;line-height:1.2;margin:0 0 8px}h2{font-size:14px;letter-spacing:.14em;color:var(--champ);margin:40px 0 12px;text-transform:uppercase}
+.lead{color:var(--dim);margin:0 0 28px}a{color:var(--ice)}
+.fact{background:var(--panel);border:1px solid #d9c49a33;border-radius:12px;padding:18px 20px;margin:14px 0}
+.said{font-size:18px;margin:0 0 10px}.said b{color:var(--ice);font-weight:600}
+.val{font-size:15px;color:var(--copper);font-weight:600;margin-bottom:6px}
+.src{font-size:15px;margin:6px 0}blockquote{margin:10px 0;padding:8px 14px;border-left:3px solid var(--champ);color:#cfdfe1;font-size:15px}
+.meta{font-size:13px;color:var(--dim)}.calc{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ice)}
+footer{margin-top:48px;color:var(--dim);font-size:14px;border-top:1px solid #d9c49a33;padding-top:18px}
+</style></head><body><main>
+<header><img src="../mark.svg" alt="Night Datum logo"><div><div class="w">Night Datum</div><div class="t">The engineering behind modern life</div></div></header>
+
+<h1>Why a Data Centre Can Be Built Before It Has Enough Power</h1><p class='lead'>Every number in the episode, in the order it is spoken: the source, the supporting passage or data, and for computed figures the arithmetic. Figures as of 8 October 2026. Found an error? Open an issue on this site's GitHub repository — corrections are logged below.</p>
+<div class='fact'>
+<p class='said'>“That was the situation Bloomberg reported at a Digital Realty data centre in Santa Clara in November 2025.”</p>
+<div class='val'>48 MW</div>
+<div class='meta'>Digital Realty SJC37 remained an empty shell awaiting full energization in November 2025, roughly six years after a 2019 application to build it</div>
+<div class='src'>Source: <a href='https://www.bloomberg.com/news/articles/2025-11-10/data-centers-in-nvidia-s-hometown-stand-empty-awaiting-power' rel='noopener'>Data Centers in Nvidia&#x27;s Hometown Stand Empty Awaiting Power — Bloomberg</a></div>
+<blockquote class=''>Roughly six years later, the development remains an empty shell awaiting full energization.</blockquote>
+<div class='meta'>Note: Bloomberg says applied in 2019 to build a data center, not that a power-service request was filed in 2019. Its 48 MW figure is total critical IT load, not total site electrical demand including cooling. The November 10, 2025 report is a historical snapshot and does not establish the building’s energization status in October 2026. Rechecked against the full Bloomberg republication on Energy Connects on 2026-10-08.</div>
+<div class='meta'>Record f017 · source dated 2025-11-10 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“A line somewhere else is now carrying too much.”</p>
+<div class='val'>Thermal and clearance limits; contingency power-flow redistribution mechanism</div>
+<div class='meta'>Transmission line current produces heat; heating and sag constrain safe loading, and loss of a line redistributes power to other lines</div>
+<div class='src'>Source: <a href='https://www.energy.gov/oe/downloads/electricity-transmission-primer' rel='noopener'>Electricity Transmission: A Primer (National Council on Electricity Policy; hosted by DOE)</a></div>
+<blockquote class=''>If, for example, a large power line drops out of service, the power flows will shift to other lines</blockquote>
+<div class='meta'>Note: Physical and Technical Characteristics of Transmission, printed page 31, PDF page 40. Used only for stable physical mechanisms, not its historical description of regulatory authority. Hot-day outage scenario in the script is illustrative and is not a diagnosis of SJC37.</div>
+<div class='meta'>Record f112 · source dated 2004-06-01 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“They call this a single contingency.”</p>
+<div class='val'>N-1 planning criterion</div>
+<div class='meta'>NERC transmission planning standard: the system must keep operating within limits after the loss of any single element (N-1)</div>
+<div class='src'>Source: <a href='https://www.nerc.com/pa/Stand/Reliability%20Standards/TPL-001-5.1.pdf' rel='noopener'>NERC TPL-001-5.1 Transmission System Planning Performance Requirements</a></div>
+<blockquote class=''>Table 1 – Steady State &amp; Stability Performance Planning Events: P1 Single Contingency ... Loss of one of the following: Generator, Transmission Circuit, Transformer ...</blockquote>
+<div class='meta'>Note: Explain as &#x27;must survive losing any one big line or transformer&#x27;.</div>
+<div class='meta'>Record f078 · source dated 2020-01-01 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Real studies also examine voltage, system stability and fault currents.”</p>
+<div class='val'>steady-state, dynamic, and short-circuit study models</div>
+<div class='meta'>NERC-recommended core study models</div>
+<div class='src'>Source: <a href='https://www.nerc.com/globalassets/programs/bpsa/alerts/2025/nerc-alert-level-2--large-loads.pdf' rel='noopener'>Large Load Interconnection, Study, Commissioning, and Operations</a></div>
+<blockquote class=''>Recommendation 2: TPs and PCs should establish a comprehensive interconnection and system-wide study process using steady state, dynamic, and short-circuit models to assess reliability impacts of Large Loads.</blockquote>
+<div class='meta'>Note: NERC recommendation; it calls for a comprehensive process, not a single universally prescribed study template.</div>
+<div class='meta'>Record f019 · source dated 2025-09-09 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Roughly two and a half years.”</p>
+<div class='val'>128 weeks</div>
+<div class='meta'>Average U.S. power-transformer lead time, Q2 2025</div>
+<div class='src'>Source: <a href='https://www.woodmac.com/news/opinion/mind-the-gap-tackling-supply-chain-challenges-in-the-electric-td-sector/' rel='noopener'>Tackling supply-chain challenges in the electric T&amp;D sector</a></div>
+<blockquote class=''>Power transformer lead times also eased in Q2, falling by 10 weeks to an average of 128 weeks, while switchgear edged down to an average of 44 weeks.</blockquote>
+<div class='meta'>Note: Wood Mackenzie Q2 2025 average; category is power transformers, not every extra-high-voltage or customized LPT.</div>
+<div class='meta'>Record f027 · source dated 2025-10-15 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Because a large transformer is designed for a particular site.”</p>
+<div class='val'>Electrical, thermal, and mechanical requirements are modeled for the site before fabrication design description</div>
+<div class='meta'>LPTs are custom-engineered to site-specific requirements</div>
+<div class='src'>Source: <a href='https://docs.nlr.gov/docs/fy26osti/96742.pdf' rel='noopener'>Large Power Transformer Supply Chain Gap Analysis and Domestic Content Strategies for Hydropower Rehabilitation: Supplemental Report</a></div>
+<blockquote class=''>The manufacturing process begins with extensive design work tailored to site-specific requirements necessitating detailed modeling of electrical, thermal, and mechanical stresses before fabrication can begin.</blockquote>
+<div class='meta'>Note: The report date is May 2026; the exact date is from the OSTI catalog record. The quoted sentence describes site-specific design, not a particular numerical design value.</div>
+<div class='meta'>Record f082 · source dated 2026-05-06 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Even if the voltages match, its electrical characteristics may be wrong for the network receiving it.”</p>
+<div class='val'>Same high- and low-side voltages do not guarantee interchangeability if impedance differs design description</div>
+<div class='meta'>Different impedance requirements can make otherwise similarly rated transformers non-interchangeable</div>
+<div class='src'>Source: <a href='https://www.energy.gov/sites/default/files/2024-10/EXEC-2022-001242%20-%20Large%20Power%20Transformer%20Resilience%20Report%20signed%20by%20Secretary%20Granholm%20on%207-10-24.pdf' rel='noopener'>Transformer Resilience: Report to Congress</a></div>
+<blockquote class=''>LPTs are very site-specific in their designs, so transformers with the same high- and low-side voltages but different impedances may not be interchangeable.</blockquote>
+<div class='meta'>Note: The report explains why impedance and site-specific system needs matter; it does not state a numerical impedance value.</div>
+<div class='meta'>Record f084 · source dated 2024-07-10 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Utilities compete for limited production slots, specialised materials and skilled workers.”</p>
+<div class='val'>116% power-transformer demand growth since 2019; constrained production slots demand growth and supply-chain mechanism</div>
+<div class='meta'>By August 2025, estimated US power-transformer demand had grown 116% since 2019; supply constraints increased competition for factory production slots</div>
+<div class='src'>Source: <a href='https://www.woodmac.com/news/opinion/transformer-troubles-manufacturing-and-policy-constraints-hit-us-transformer-supply/' rel='noopener'>Transformer troubles: manufacturing and policy constraints hit US transformer supply</a></div>
+<blockquote class=''>increased competition for available production slots</blockquote>
+<div class='meta'>Note: The article distinguishes 116% demand growth for power transformers from 274% for generation step-up transformers. It links production constraints to raw materials and specialist technical labour, as well as custom components. Rising lead time includes competition for available slots, not only fabrication duration. Checked 2026-10-08.</div>
+<div class='meta'>Record f114 · source dated 2025-08-13 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“The windings and insulation have to be made, and the finished unit tested before it leaves the factory.”</p>
+<div class='val'>Cold-rolled, grain-oriented laminated electrical steel (CRGO) material/process</div>
+<div class='meta'>Transformer core material and construction</div>
+<div class='src'>Source: <a href='https://www.energy.gov/sites/prod/files/2014/04/f15/LPTStudyUpdate-040914.pdf' rel='noopener'>Large Power Transformers and the U.S. Electric Grid — April 2014 Update</a></div>
+<blockquote class=''>The core is the most critical component of an LPT, which requires a highly-trained and skilled workforce and cold-rolled, grain-oriented (CRGO) laminated electrical steel.</blockquote>
+<div class='meta'>Note: The report identifies the core material; it does not give a numeric steel thickness or core dimension in this sentence.</div>
+<div class='meta'>Record f085 · source dated 2014-04-09 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“The windings and insulation have to be made, and the finished unit tested before it leaves the factory.”</p>
+<div class='val'>Factory acceptance tests include impulse, partial-discharge, and temperature-rise tests; vibration checks are used for hydropower applications testing process</div>
+<div class='meta'>Factory testing before shipment</div>
+<div class='src'>Source: <a href='https://docs.nlr.gov/docs/fy26osti/96742.pdf' rel='noopener'>Large Power Transformer Supply Chain Gap Analysis and Domestic Content Strategies for Hydropower Rehabilitation: Supplemental Report</a></div>
+<blockquote class=''>Before leaving the factory, each unit undergoes rigorous testing, including impulse, partial discharge, and temperature rise tests, as well as vibration checks for hydropower applications.</blockquote>
+<div class='meta'>Note: The report&#x27;s manufacturing-stages table identifies these as IEEE/IEC factory acceptance tests; vibration checks are noted for hydropower applications.</div>
+<div class='meta'>Record f089 · source dated 2026-05-06 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Some large transformers weigh as much as 400 US tons.”</p>
+<div class='val'>100–400 tons</div>
+<div class='meta'>Approximate LPT weight range in the 2014 DOE report</div>
+<div class='src'>Source: <a href='https://www.energy.gov/sites/prod/files/2014/04/f15/LPTStudyUpdate-040914.pdf' rel='noopener'>Large Power Transformers and the U.S. Electric Grid — April 2014 Update</a></div>
+<blockquote class=''>Although prices vary by manufacturer and by size, an LPT can cost millions of dollars and weigh between approximately 100 and 400 tons (or between 200,000 and 800,000 pounds).</blockquote>
+<div class='meta'>Note: The report gives an approximate range; weight varies with manufacturer and transformer size.</div>
+<div class='meta'>Record f080 · source dated 2014-04-09 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“Special rail cars distribute that weight across as many as 20 axles.”</p>
+<div class='val'>12–20 axles; LPTs typically require 18- or 20-axle cars axles</div>
+<div class='meta'>Schnabel railcar axle configurations used for transformer transport</div>
+<div class='src'>Source: <a href='https://www.energy.gov/sites/default/files/2024-10/EXEC-2022-001242%20-%20Large%20Power%20Transformer%20Resilience%20Report%20signed%20by%20Secretary%20Granholm%20on%207-10-24.pdf' rel='noopener'>Transformer Resilience: Report to Congress</a></div>
+<blockquote class=''>The cars have 12-20 axles to better distribute the weight across the rail section.</blockquote>
+<div class='meta'>Note: The report separately states that LPTs typically require 18- and 20-axle Schnabel cars; smaller transformers can use cars with fewer axles.</div>
+<div class='meta'>Record f092 · source dated 2024-07-10 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“For Santa Clara, the utility described a wider system expansion serving several customers.”</p>
+<div class='val'>$450 million; 2028 upgrade cost; scheduled completion year</div>
+<div class='meta'>SVP said its system-wide upgrade was intended to meet customer needs and was on schedule for completion in 2028.</div>
+<div class='src'>Source: <a href='https://www.energyconnects.com/news/utilities/2025/november/data-centers-in-nvidia-s-hometown-stand-empty-awaiting-power/' rel='noopener'>Data Centers in Nvidia&#x27;s Hometown Stand Empty Awaiting Power</a></div>
+<blockquote class=''>“SVP is undertaking a $450 million system upgrade to meet the needs of these and other customers, and the project is currently on schedule to be completed in 2028,” she wrote.</blockquote>
+<div class='meta'>Note: This is a statement attributed to SVP spokesperson Janine de la Vega; it describes an overall system upgrade, not a date when every waiting customer will receive power.</div>
+<div class='meta'>Record f106 · source dated 2025-11-10 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“A facility could move some work to another site, run less equipment, or supply some electricity from its own generators.”</p>
+<div class='val'>76 GW</div>
+<div class='meta'>New flexible load the US grid could accommodate at 0.25% curtailment</div>
+<div class='src'>Source: <a href='https://dukespace.lib.duke.edu/items/bb350296-d7a1-4d8f-acb0-2fba9b1f03de' rel='noopener'>Rethinking Load Growth: Assessing the Potential for Integration of Large Flexible Loads in US Power Systems</a></div>
+<blockquote class=''>76 GW of new load—equivalent to 10% of the nation’s current aggregate peak demand—could be integrated with an average annual load curtailment rate of 0.25% (i.e., if new loads can be curtailed for 0.25% of their maximum uptime)</blockquote>
+<div class='meta'>Note: Estimate covers 22 balancing authorities, representing 95% of US peak load. The report defines curtailment rate by annual curtailed energy relative to the new load’s maximum potential annual consumption; it is not simply a count of hours.</div>
+<div class='meta'>Record f056 · source dated 2025-02-11 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“In July 2024, a transmission fault triggered the loss of about 1,500 megawatts of data-centre demand.”</p>
+<div class='val'>1500 MW</div>
+<div class='meta'>NERC incident review: the July 2024 transmission fault caused a simultaneous loss of data-center-type load</div>
+<div class='src'>Source: <a href='https://www.nerc.com/globalassets/our-work/reports/event-reports/incident_review_large_load_loss.pdf' rel='noopener'>Incident Review: Considering Simultaneous Voltage-Sensitive Load Reductions</a></div>
+<blockquote class=''>A 230 kV transmission line fault led to customer-initiated simultaneous loss of approximately 1,500 MW of voltage-sensitive load that was not anticipated by the BES operators.</blockquote>
+<div class='meta'>Note: NERC says the lost load was exclusively data-center-type load. The report does not specify 60 individual data centers.</div>
+<div class='meta'>Record f093 · source dated 2025-01-08 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“That event did not cause a dangerous frequency rise.”</p>
+<div class='val'>Dynamic response models; reconnection ramp rates planning and operating recommendations</div>
+<div class='meta'>NERC recommends modelling large-load dynamic responses and coordinating connection and reconnection ramp rates</div>
+<div class='src'>Source: <a href='https://www.nerc.com/globalassets/our-work/reports/event-reports/incident_review_large_load_loss.pdf' rel='noopener'>Incident Review: Considering Simultaneous Voltage-Sensitive Load Reductions</a></div>
+<blockquote class=''>Require dynamic response models of large loads in their facility interconnection requirements</blockquote>
+<div class='meta'>Note: Future Considerations, pages 8–9. The July 2024 event did not cause a concerning frequency excursion. These are recommendations in the incident review, not proof that every utility has implemented identical requirements.</div>
+<div class='meta'>Record f113 · source dated 2025-01-08 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“A sufficiently large change can trigger protection and disconnect generators.”</p>
+<div class='val'>Many gigawatts GW of load</div>
+<div class='meta'>NERC identified simultaneous loss of very large loads as a potential reliability risk</div>
+<div class='src'>Source: <a href='https://www.nerc.com/globalassets/who-we-are/standing-committees/rstc/whitepaper-characteristics-and-risks-of-emerging-large-loads.pdf' rel='noopener'>Characteristics and Risks of Emerging Large Loads</a></div>
+<blockquote class=''>The known behaviors of large loads indicate that there is the potential for many gigawatts of large load to be lost nearly simultaneously, leading to the overfrequency issues discussed previously.</blockquote>
+<div class='meta'>Note: NERC presents this as a potential system-level risk, not as a measured event total.</div>
+<div class='meta'>Record f100 · source dated 2025-07-28 · confidence high</div>
+</div>
+<div class='fact'>
+<p class='said'>“In energy terms, it&#x27;s about 22 hours at full load.”</p>
+<div class='val'>about 22 hours per year</div>
+<div class='meta'>COMPUTED: energy equivalent of 0.25% annual curtailment, expressed as hours at maximum load</div>
+<div class='src'>Computed from f056</div>
+<blockquote class='calc'>8,760 h x 0.0025 = 21.9 h</blockquote>
+<div class='meta'>Note: 8,760 × 0.0025 = 21.9 full-load-equivalent hours. Duke defines the rate using annually curtailed energy divided by maximum potential annual consumption. This is not the number of clock hours with curtailment and not a promise to stop only 22 hours per year. Curtailment may be partial across more hours.</div>
+<div class='meta'>Record f077 · source dated 2026-09-27 · confidence high</div>
+</div>
+<h2>Corrections</h2><p class='lead'>None so far.</p>
+<footer>Night Datum is an independent, one-person channel. Visuals are illustrations built from these sources; where a figure is modelled or computed, it says so above.</footer></main></body></html>
